@@ -52,7 +52,7 @@
         <EditText
             android:id="@+id/editTextTextDescripcion"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="168dp"
             android:layout_marginLeft="20sp"
             android:layout_marginTop="20sp"
             android:layout_marginRight="20sp"
@@ -60,7 +60,7 @@
             android:hint="Descripcion"
             android:inputType="textMultiLine|textImeMultiLine"
             android:lines="10"
-            android:minHeight="80dp" />
+            android:minHeight="60dp" />
 
         <Button
             android:id="@+id/button"
@@ -69,7 +69,16 @@
             android:layout_marginLeft="20sp"
             android:layout_marginTop="15sp"
             android:layout_marginRight="20sp"
-            android:text="Test" />
+            android:text="Consultar" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="20sp"
+            android:text="Guardar" />
 
         <Button
             android:id="@+id/button2"

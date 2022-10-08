@@ -22,7 +22,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     EditText txtIdUser, txtTitle, txtBody, txtId;
-    Button btnTest, btnLimpiar, btnEliminar;
+    Button btnTest, btnLimpiar, btnEliminar, btnGuardar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +35,17 @@ public class MainActivity extends AppCompatActivity {
         btnTest=findViewById(R.id.button);
         btnLimpiar=findViewById(R.id.button3);
         btnEliminar=findViewById(R.id.button2);
+        btnGuardar=findViewById(R.id.btnGuardar);
         btnTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //leerServicio();
+                leerServicio();
+            }
+        });
+
+        btnGuardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 guardar(txtId.getText().toString(), txtTitle.getText().toString(), txtBody.getText().toString());
             }
         });
@@ -67,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void leerServicio(){
-        String url="https://jsonplaceholder.typicode.com/posts/"+ txtIdUser.getText().toString();
+        String url="https://jsonplaceholder.typicode.com/posts/"+ txtId.getText().toString();
         StringRequest postRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
